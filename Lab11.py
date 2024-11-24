@@ -2,7 +2,7 @@ import os
 import matplotlib.pyplot as plt
 
 
-# Reading students
+
 def read_students():
     students = {}
     with open("data/students.txt", "r") as file:
@@ -14,7 +14,7 @@ def read_students():
     return students
 
 
-# Reading assignments
+
 def read_assignments():
     assignments = {}
     with open("data/assignments.txt", "r") as file:
@@ -27,7 +27,7 @@ def read_assignments():
     return assignments
 
 
-# Reading submissions
+
 def read_submissions():
     submissions = []
     submissions_dir = "data/submissions"
@@ -52,7 +52,7 @@ def read_submissions():
     return submissions
 
 
-# Main program
+
 def main():
     students = read_students()
     assignments = read_assignments()
