@@ -77,7 +77,7 @@ Enter your selection: """
                 for sub in submissions if sub[0] == student_id
             )
             grade_percentage = round((total_score / 1000) * 100)
-            print(f"{grade_percentage}%")
+            print(f"{int(grade_percentage)}%")
     elif choice == "2":
         assignment_name = input("What is the assignment name: ").strip()
         assignment_id = next((id_ for id_, info in assignments.items() if info["name"] == assignment_name), None)
@@ -85,9 +85,9 @@ Enter your selection: """
             print("Assignment not found")
         else:
             scores = [sub[2] for sub in submissions if sub[1] == assignment_id]
-            print(f"Min: {min(scores)}%")
-            print(f"Avg: {sum(scores) / len(scores):.0f}%")
-            print(f"Max: {max(scores)}%")
+            print(f"Min: {int(min(scores))}%")
+            print(f"Avg: {int(sum(scores) / len(scores))}%")
+            print(f"Max: {int(max(scores))}%")
     elif choice == "3":
         assignment_name = input("What is the assignment name: ").strip()
         assignment_id = next((id_ for id_, info in assignments.items() if info["name"] == assignment_name), None)
